@@ -9,6 +9,11 @@ public class BinaryAdder {
 			System.out.println("Inputs dürfen nicht null sein");
 			return null;
 		}
+
+		if(!binary1.matches("[01]+") || !binary2.matches("[01]+")) {
+        	System.out.println("Fehler: Nur 0 und 1 erlaubt!");
+        	return "0";
+    	}
 		
 		boolean carry = false;
 		StringBuilder builder = new StringBuilder("");
